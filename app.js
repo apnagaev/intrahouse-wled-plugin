@@ -76,6 +76,22 @@ function color(value) {
   return value.trim().replace(/^#/, '').match(/../g).map(byte => parseInt(byte, 16));
 }
 
+const CATALOG_PATHS = {
+  preset: '/presets.json',
+  effect: '/json/eff',
+  palette: '/json/pal'
+};
+const CATALOG_TTL = 60000;
+
+function catalogNames(kind, response) {
+  const entries = kind === 'preset'
+    ? Object.entries(response || {}).filter(([id]) => /^[1-9]\d*$/.test(id) && Number(id) <= 250)
+      .map(([id, preset]) => [Number(id), preset && preset.n])
+    : Array.isArray(response) ? Object.entries(response).map(([id, name]) => [Number(id), name]) : [];
+  return new Map(entries.filter(([, name]) => typeof name === 'string' &&
+    name.trim() && name !== '-' && name !== 'RSVD'));
+}
+
 const WRITE = {
   on: value => ({ on: power(value) }),
   brightness: value => {
@@ -102,6 +118,67 @@ module.exports = function start(plugin, params) {
   const configuredSegment = integer(params.segment == null || params.segment === '' ? -1 : params.segment, -1, 255, 'Сегмент');
 
   let state;
+  let refreshAt = 0;
+  let refreshInFlight;
+  const catalogs = new Map();
+  const channelIds = new Map();
+  function updateChannels(channels) {
+    if (!Array.isArray(channels)) return;
+    channelIds.clear();
+    for (const channel of channels) {
+      if (channel.chan && channel.id) channelIds.set(channel.chan, channel.id);
+    }
+  }
+
+  function refreshCatalogs() {
+    if (refreshInFlight) return refreshInFlight;
+    refreshAt = Date.now() + CATALOG_TTL;
+    refreshInFlight = (async () => {
+      for (const [kind, pathname] of Object.entries(CATALOG_PATHS)) {
+        try {
+          const response = await request(new URL(pathname, endpoint), timeout);
+          catalogs.set(kind, catalogNames(kind, response));
+        } catch (error) {
+          plugin.log('Справочник WLED ' + kind + ': ' + error.message);
+        }
+      }
+      if (state) publishNames();
+    })().finally(() => { refreshInFlight = undefined; });
+    return refreshInFlight;
+  }
+
+  function publishNames() {
+    const segment = selectedSegment();
+    const ids = { preset: state.ps, effect: segment && segment.fx, palette: segment && segment.pal };
+    publish(Object.fromEntries(Object.entries(ids).map(([kind, id]) => [
+      kind + '_name',
+      !Number.isInteger(id) || id < 0 ? '' : (catalogs.get(kind)?.get(id) || String(id))
+    ])));
+  }
+
+  function findCatalogId(kind, value) {
+    const names = catalogs.get(kind);
+    const query = String(value).trim().normalize('NFC');
+    if (!names || !query) return;
+    const entries = [...names];
+    const exact = entries.filter(([, name]) => name.trim().normalize('NFC') === query);
+    const matches = exact.length ? exact : entries.filter(([, name]) =>
+      name.trim().normalize('NFC').toLowerCase() === query.toLowerCase());
+    if (matches.length > 1) throw new Error('несколько совпадений, укажите ID с префиксом #');
+    return matches.length ? matches[0][0] : undefined;
+  }
+
+  async function resolveName(kind, value) {
+    if (typeof value !== 'string' || !value.trim()) throw new Error('введите название или ID');
+    if (!catalogs.has(kind) && Date.now() >= refreshAt) await refreshCatalogs();
+    else if (refreshInFlight) await refreshInFlight;
+    const query = value.trim();
+    if (/^#\d+$/.test(query)) return query.slice(1);
+    const id = findCatalogId(kind, query);
+    if (id !== undefined) return id;
+    if (/^\d+$/.test(value.trim())) return value;
+    throw new Error('название отсутствует в справочнике WLED: ' + value);
+  }
   let online;
   let busy = false;
   const commands = [];
@@ -117,7 +194,7 @@ module.exports = function start(plugin, params) {
     const ts = Date.now();
     const data = Object.entries(values)
       .filter(([, value]) => value !== undefined)
-      .map(([id, value]) => ({ id, value, ts }));
+      .map(([id, value]) => ({ id: channelIds.get(id) || id, value, ts }));
     plugin.sendData(data);
   }
 
@@ -144,6 +221,8 @@ module.exports = function start(plugin, params) {
       effect: segment && segment.fx,
       palette: segment && segment.pal
     });
+    publishNames();
+    if (Date.now() >= refreshAt) refreshCatalogs();
   }
 
   async function exchange(payload) {
@@ -156,6 +235,7 @@ module.exports = function start(plugin, params) {
       }
       return true;
     } catch (error) {
+      if (online !== false) refreshAt = 0;
       if (online !== false) plugin.log('Связь с WLED: ' + error.message);
       state = undefined;
       online = false;
@@ -170,17 +250,20 @@ module.exports = function start(plugin, params) {
     try {
       if (!commands.length) await exchange();
       while (commands.length) {
-        const { id, value } = commands.shift();
+        const { id: channel, value } = commands.shift();
+        const byName = channel.endsWith('_name');
+        const id = byName ? channel.slice(0, -5) : channel;
         queueWarning = false;
         let payload;
         try {
+          const commandValue = byName ? await resolveName(id, value) : value;
           if (id === 'color' || id === 'effect' || id === 'palette') {
             if (!state && !await exchange()) continue;
             const segment = selectedSegment();
             if (!segment || !Number.isInteger(segment.id)) throw new Error('выбранный сегмент отсутствует в WLED');
-            payload = WRITE[id](value, segment.id);
+            payload = WRITE[id](commandValue, segment.id);
           } else {
-            payload = WRITE[id](value);
+            payload = WRITE[id](commandValue);
           }
         } catch (error) {
           plugin.log('Команда ' + id + ' отклонена: ' + error.message);
@@ -201,9 +284,11 @@ module.exports = function start(plugin, params) {
 
   plugin.onAct(message => {
     for (const command of message.data || []) {
-      if (!Object.prototype.hasOwnProperty.call(WRITE, command.id)) continue;
+      const id = command.chan || [...channelIds].find(([, channelId]) => channelId === command.id)?.[0] || command.id;
+      if (typeof id !== 'string' || (!Object.prototype.hasOwnProperty.call(WRITE, id) &&
+          !(id.endsWith('_name') && Object.prototype.hasOwnProperty.call(CATALOG_PATHS, id.slice(0, -5))))) continue;
       if (commands.length < MAX_PENDING_COMMANDS) {
-        commands.push(command);
+        commands.push({ id, value: command.value });
       } else if (!queueWarning) {
         queueWarning = true;
         plugin.log('Очередь WLED заполнена, новые команды пропущены');
@@ -212,7 +297,14 @@ module.exports = function start(plugin, params) {
     if (commands.length) tick();
   });
 
-  tick();
+  if (plugin.channels) {
+    const loadChannels = () => Promise.resolve(plugin.channels.get()).then(updateChannels)
+      .catch(error => plugin.log('Каналы WLED: ' + error.message));
+    if (typeof plugin.onChange === 'function') plugin.onChange('channels', loadChannels);
+    loadChannels().then(tick);
+  } else {
+    tick();
+  }
   const timer = setInterval(tick, interval);
   return () => clearInterval(timer);
 };
