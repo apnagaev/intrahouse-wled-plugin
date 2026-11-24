@@ -142,9 +142,18 @@ module.exports = function start(plugin, params) {
           plugin.log('Справочник WLED ' + kind + ': ' + error.message);
         }
       }
-      if (state) publishNames();
+      if (state) {
+        publishNames();
+        publishControls();
+      }
     })().finally(() => { refreshInFlight = undefined; });
     return refreshInFlight;
+  }
+
+  function publishControls() {
+    const controls = { url: new URL('/settings', endpoint).href };
+    for (const [kind, names] of catalogs) controls[kind] = [...names];
+    publish({ controls: JSON.stringify(controls) });
   }
 
   function publishNames() {
@@ -209,7 +218,10 @@ module.exports = function start(plugin, params) {
     const validColor = Array.isArray(rgb) && (rgb.length === 3 || rgb.length === 4) &&
       rgb.every(byte => Number.isInteger(byte) && byte >= 0 && byte <= 255);
     const hex = validColor ? '#' + Buffer.from(rgb).toString('hex').toUpperCase() : undefined;
-    if (online !== true) plugin.log('Связь с WLED установлена');
+    if (online !== true) {
+      plugin.log('Связь с WLED установлена');
+      publishControls();
+    }
     online = true;
     publish({
       online: 1,
@@ -300,7 +312,11 @@ module.exports = function start(plugin, params) {
   if (plugin.channels) {
     const loadChannels = () => Promise.resolve(plugin.channels.get()).then(updateChannels)
       .catch(error => plugin.log('Каналы WLED: ' + error.message));
-    if (typeof plugin.onChange === 'function') plugin.onChange('channels', loadChannels);
+    if (typeof plugin.onChange === 'function') {
+      plugin.onChange('channels', () => loadChannels().then(() => {
+        if (state) publishControls();
+      }));
+    }
     loadChannels().then(tick);
   } else {
     tick();
