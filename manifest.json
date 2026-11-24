@@ -32,72 +32,84 @@
     "channels": [
       {
         "chan": "online",
+        "devpropname": "online",
         "title": "Связь с контроллером",
         "r": 1,
         "w": 0
       },
       {
         "chan": "on",
+        "devpropname": "state",
         "title": "Питание ленты",
         "r": 1,
         "w": 1
       },
       {
         "chan": "brightness",
+        "devpropname": "bright",
         "title": "Яркость, %",
         "r": 1,
         "w": 1
       },
       {
         "chan": "preset",
+        "devpropname": "preset",
         "title": "Пресет WLED",
         "r": 1,
         "w": 1
       },
       {
         "chan": "color",
+        "devpropname": "color",
         "title": "Основной цвет сегмента, HEX",
         "r": 1,
         "w": 1
       },
       {
         "chan": "effect",
+        "devpropname": "effect",
         "title": "Эффект сегмента",
         "r": 1,
         "w": 1
       },
       {
         "chan": "palette",
+        "devpropname": "palette",
         "title": "Палитра сегмента",
         "r": 1,
         "w": 1
       },
       {
         "chan": "segment_available",
+        "devpropname": "segment_available",
         "title": "Выбранный сегмент доступен",
         "r": 1,
         "w": 0
       },
       {
         "chan": "preset_name",
+        "devpropname": "preset_name",
         "title": "Пресет WLED по названию",
         "r": 1,
         "w": 1
       },
       {
         "chan": "effect_name",
+        "devpropname": "effect_name",
         "title": "Эффект WLED по названию",
         "r": 1,
         "w": 1
       },
       {
         "chan": "palette_name",
+        "devpropname": "palette_name",
         "title": "Палитра WLED по названию",
         "r": 1,
         "w": 1
       },
       {
         "chan": "controls",
+        "devpropname": "wled_controls",
         "title": "Списки и ссылка на настройки WLED",
         "r": 1,
         "w": 0

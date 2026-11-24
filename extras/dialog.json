@@ -1,0 +1,1705 @@
+{
+  "settings": {
+    "x": {
+      "value": 439
+    },
+    "y": {
+      "value": -45
+    },
+    "w": {
+      "value": 780
+    },
+    "h": {
+      "value": 930
+    },
+    "scale": {
+      "value": 0.72
+    },
+    "grid": {
+      "value": 5
+    },
+    "backgroundColor": {
+      "type": "fill",
+      "value": "var(--lav24-paper,#fffdf9)",
+      "fill": "var(--lav24-paper,#fffdf9)",
+      "angle": 180,
+      "shape": "circle",
+      "positionX": 50,
+      "positionY": 50,
+      "extent": "closest-side",
+      "palette": [
+        {
+          "offset": "0.000",
+          "color": "#9b9b9b",
+          "opacity": 0.42,
+          "id": 1
+        },
+        {
+          "offset": "1.000",
+          "color": "#e7e7e7",
+          "opacity": 1,
+          "id": 2
+        }
+      ]
+    },
+    "backgroundImage": {
+      "value": "unset"
+    },
+    "overlayColor": {
+      "type": "fill",
+      "value": "rgba(0,0,0,0)",
+      "fill": "rgba(0,0,0,0)",
+      "angle": 90,
+      "shape": "circle",
+      "positionX": 50,
+      "positionY": 50,
+      "extent": "closest-side",
+      "palette": [
+        {
+          "offset": "0.000",
+          "color": "#4a90e2",
+          "opacity": 0.2,
+          "id": 1
+        },
+        {
+          "offset": "1.000",
+          "color": "#9013fe",
+          "opacity": 0.16,
+          "id": 2
+        }
+      ]
+    },
+    "fitW": {
+      "value": true
+    },
+    "fitH": {
+      "value": true
+    },
+    "alignW": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "alignH": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "position": {
+      "value": {
+        "id": "center",
+        "title": "Center"
+      }
+    },
+    "outsideClose": {
+      "value": 1
+    }
+  },
+  "list": [
+    "rectangle_1",
+    "text_1",
+    "text_2",
+    "button_1",
+    "button_5",
+    "button_6",
+    "slider_android_1",
+    "lav24_system_palette",
+    "wled_status",
+    "brightness_label",
+    "wled_segment",
+    "wled_controls"
+  ],
+  "elements": {
+    "rectangle_1": {
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 18
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,0,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-hero,#28354a)",
+        "fill": "var(--lav24-hero,#28354a)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": true,
+        "value": "2px 2px 4px 0px #929292ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "rectangle",
+      "x": {
+        "value": 0
+      },
+      "y": {
+        "value": 0
+      },
+      "w": {
+        "value": 780
+      },
+      "h": {
+        "value": 133
+      },
+      "w2": {
+        "value": 780
+      },
+      "h2": {
+        "value": 133
+      },
+      "_label": "rectangle_1"
+    },
+    "text_1": {
+      "text": {
+        "value": "Text 1",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'name');",
+        "text": "Text 1"
+      },
+      "textSize": {
+        "value": 38
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "title": "Left"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-cream,#fff6e9)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "x": {
+        "value": 27
+      },
+      "y": {
+        "value": 6
+      },
+      "w": {
+        "value": 604
+      },
+      "h": {
+        "value": 70
+      },
+      "w2": {
+        "value": 604
+      },
+      "h2": {
+        "value": 70
+      },
+      "_label": "text_1"
+    },
+    "text_2": {
+      "text": {
+        "value": "Text 1",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'dn');",
+        "text": "Text 1"
+      },
+      "textSize": {
+        "value": 26
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-end",
+          "title": "Right"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-cream,#fff6e9)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "x": {
+        "value": 464
+      },
+      "y": {
+        "value": 81
+      },
+      "w": {
+        "value": 177
+      },
+      "h": {
+        "value": 40
+      },
+      "w2": {
+        "value": 177
+      },
+      "h2": {
+        "value": 40
+      },
+      "_label": "text_2"
+    },
+    "button_1": {
+      "text": {
+        "value": ""
+      },
+      "textSize": {
+        "value": 28
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "value": "symbol3210.svg",
+        "folder": "img033"
+      },
+      "imgColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "imgSize": {
+        "value": -50
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-paper,#fffdf9)",
+        "fill": "var(--lav24-paper,#fffdf9)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {},
+            "title": "close",
+            "command": "close"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 655
+      },
+      "y": {
+        "value": 10
+      },
+      "w": {
+        "value": 108
+      },
+      "h": {
+        "value": 108
+      },
+      "w2": {
+        "value": 108
+      },
+      "h2": {
+        "value": 108
+      },
+      "_label": "button_1"
+    },
+    "button_5": {
+      "text": {
+        "value": "Вкл"
+      },
+      "textSize": {
+        "value": 40
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-buttonInk,#233c51)"
+      },
+      "img": {
+        "folder": "imgsystem",
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-button,#e6eef3)",
+        "fill": "var(--lav24-button,#e6eef3)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 30 : 100;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {
+              "func": "deviceCommand(inData, 'on')"
+            },
+            "did": "local_dev_id",
+            "prop": "dev_id",
+            "title": "dev_id ID устройства",
+            "command": "device",
+            "type": "local"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 39
+      },
+      "y": {
+        "value": 171
+      },
+      "w": {
+        "value": 325
+      },
+      "h": {
+        "value": 86
+      },
+      "w2": {
+        "value": 325
+      },
+      "h2": {
+        "value": 86
+      },
+      "_label": "button_2",
+      "disabled": {
+        "value": 0
+      }
+    },
+    "button_6": {
+      "text": {
+        "value": "Выкл"
+      },
+      "textSize": {
+        "value": 40
+      },
+      "textBold": {
+        "value": 0
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-dangerInk,#fff8f2)"
+      },
+      "img": {
+        "folder": "imgsystem",
+        "value": ""
+      },
+      "imgColor": {
+        "value": "transparent"
+      },
+      "imgSize": {
+        "value": 0
+      },
+      "imgRotate": {
+        "value": 0
+      },
+      "imgPosition": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "imgRatio": {
+        "value": 30
+      },
+      "borderSize": {
+        "value": 1
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-danger,#8b3d39)",
+        "fill": "var(--lav24-danger,#8b3d39)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000ff"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100,
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "return getValue(inData, 'state')==1 ? 100 : 30;",
+        "number": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "colorRipple": {
+        "value": "rgba(255,255,255,1)"
+      },
+      "colorHover": {
+        "value": "rgba(0,0,0,0.2)"
+      },
+      "actions": {
+        "left": [
+          {
+            "action": "singleClickLeft",
+            "value": {
+              "func": "deviceCommand(inData, 'off')"
+            },
+            "did": "local_dev_id",
+            "prop": "dev_id",
+            "title": "dev_id ID устройства",
+            "command": "device",
+            "type": "local"
+          },
+          {
+            "action": "doubleClickLeft",
+            "value": {}
+          },
+          {
+            "action": "longClickLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseDownLeft",
+            "value": {}
+          },
+          {
+            "action": "mouseUpLeft",
+            "value": {}
+          }
+        ],
+        "right": [
+          {
+            "action": "singleClickRight",
+            "value": {}
+          }
+        ]
+      },
+      "type": "button",
+      "x": {
+        "value": 416
+      },
+      "y": {
+        "value": 171
+      },
+      "w": {
+        "value": 325
+      },
+      "h": {
+        "value": 86
+      },
+      "w2": {
+        "value": 325
+      },
+      "h2": {
+        "value": 86
+      },
+      "_label": "button_3"
+    },
+    "slider_android_1": {
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 16
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,0,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "var(--lav24-field,#f1ede6)",
+        "fill": "var(--lav24-field,#f1ede6)",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "widget": true,
+      "control": true,
+      "widgetlinks": {
+        "link": {
+          "enabled": true,
+          "type": "local",
+          "did": "local_dev_id",
+          "prop": "dev_id",
+          "id": "local_dev_id",
+          "title": "ID устройства",
+          "title2": "ID устройства",
+          "value": {
+            "func": "return getValue(inData, 'bright');"
+          }
+        }
+      },
+      "data": {},
+      "min": {
+        "value": 0
+      },
+      "max": {
+        "value": 100
+      },
+      "autoHideLabel": {
+        "value": false
+      },
+      "labelSize": {
+        "value": 28
+      },
+      "trackStep": {
+        "value": 1
+      },
+      "labelColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "trackColorLeft": {
+        "value": "var(--lav24-info,#275e94)"
+      },
+      "trackColorRight": {
+        "value": "var(--lav24-edge,#e3d8c8)"
+      },
+      "thumbColor": {
+        "value": "var(--lav24-info,#275e94)"
+      },
+      "type": "slider_android",
+      "_label": "slider_android_1",
+      "x": {
+        "value": 26
+      },
+      "y": {
+        "value": 380
+      },
+      "w": {
+        "value": 728
+      },
+      "h": {
+        "value": 102
+      },
+      "w2": {
+        "value": 728
+      },
+      "h2": {
+        "value": 102
+      }
+    },
+    "lav24_system_palette": {
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,0,0,0)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": -1
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "code": {
+        "value": "<script type=\"text/javascript\">\n(() => {\n  const styleId = 'lav24-system-palette';\n  if (document.getElementById(styleId)) return;\n\n  const stylesheet = document.createElement('style');\n  stylesheet.id = styleId;\n  stylesheet.textContent = \":root{--lav24-bg:#f5efe6;--lav24-paper:#fffdf9;--lav24-ink:#28354a;--lav24-muted:#536277;--lav24-hero:#28354a;--lav24-cream:#fff6e9;--lav24-active:#efc596;--lav24-edge:#e3d8c8;--lav24-field:#f1ede6;--lav24-button:#e6eef3;--lav24-buttonInk:#233c51;--lav24-danger:#8b3d39;--lav24-dangerInk:#fff8f2;--lav24-instrument:#fffdf9;--lav24-info:#275e94}@media (prefers-color-scheme: dark){:root{--lav24-bg:#151b24;--lav24-paper:#242e3d;--lav24-ink:#f4eee6;--lav24-muted:#c2cedc;--lav24-hero:#222d3e;--lav24-cream:#fff4e5;--lav24-active:#73491f;--lav24-edge:#415065;--lav24-field:#303d50;--lav24-button:#364a63;--lav24-buttonInk:#f2f6fb;--lav24-danger:#7f3942;--lav24-dangerInk:#fff2ee;--lav24-instrument:#e9e0d4;--lav24-info:#9cc9ff}}\";\n  document.head.appendChild(stylesheet);\n})();\n</script>\n<script type=\"text/javascript\">\n(() => {\n  const id = 'lav24-dialog-controls';\n  if (document.getElementById(id)) return;\n  const style = document.createElement('style');\n  style.id = id;\n  style.textContent = \":root{--lav24-dialog-journal:#e9e2d6;--lav24-dialog-journal-ink:#28354a;--lav24-dialog-check:#eee8df}\\n@media(prefers-color-scheme:dark){:root{--lav24-dialog-journal-surface:#273243;--lav24-dialog-journal-ink:#e7edf5;--lav24-dialog-check:#303d50}}\\n[style*=\\\"--lav24-dialog-journal\\\"]{background-color:var(--lav24-dialog-journal-surface,var(--lav24-dialog-journal))!important;color:var(--lav24-dialog-journal-ink);font-size:32px;line-height:1.35}\\n[style*=\\\"--lav24-dialog-journal\\\"] :is(p,span,time,.MuiTypography-root,.MuiTimelineContent-root,.MuiTimelineOppositeContent-root){color:var(--lav24-dialog-journal-ink)!important;font-size:32px!important;line-height:1.35!important}\\n[style*=\\\"--lav24-dialog-journal\\\"] :is(.MuiTimelineDot-root,.MuiTimelineConnector-root){background-color:var(--lav24-muted,#536277)}\\n[style*=\\\"--lav24-dialog-check\\\"] :is(.MuiFormControlLabel-label,.MuiTypography-root){font-size:32px!important;color:var(--lav24-ink,#28354a)}\\n[style*=\\\"--lav24-dialog-check\\\"] .MuiCheckbox-root .MuiSvgIcon-root{width:34px;height:34px}\";\n  document.head.appendChild(style);\n})();\n</script>\n<script type=\"text/javascript\">\n(() => {\n  const id = 'lav24-dialog-touch-layout';\n  if (document.getElementById(id)) return;\n  const style = document.createElement('style');\n  style.id = id;\n  style.textContent = \"[style*=\\\"--lav24-touch-check\\\"] .MuiFormControlLabel-root{display:flex!important;justify-content:flex-start!important;width:100%;height:100%;margin:0!important;gap:10px;box-sizing:border-box}\\n[style*=\\\"--lav24-touch-check\\\"] .MuiCheckbox-root{flex:0 0 64px;width:64px;height:64px;padding:0!important}\\n[style*=\\\"--lav24-touch-check\\\"] .MuiCheckbox-root svg{width:42px!important;height:42px!important;font-size:42px!important}\\n[style*=\\\"--lav24-touch-check\\\"] .MuiFormControlLabel-label{font-size:32px!important;line-height:1.1!important}\";\n  document.head.appendChild(style);\n})();\n</script>\n<script type=\"text/javascript\">\n(() => {\n  const id = 'lav24-number-field-layout';\n  if (document.getElementById(id)) return;\n  const style = document.createElement('style');\n  style.id = id;\n  style.textContent = \"[style*=\\\"--lav24-number-field\\\"]:not(input){\\n  display:flex!important;\\n  align-items:center!important;\\n  box-sizing:border-box;\\n}\\n[style*=\\\"--lav24-number-field\\\"] .MuiFormControl-root{\\n  flex:1 1 auto;\\n  width:100%;\\n  min-width:0;\\n  height:auto!important;\\n  justify-content:center;\\n}\\n:is([style*=\\\"--lav24-number-field\\\"],[style*=\\\"--lav24-number-field\\\"] *) .MuiInputBase-root,\\n[style*=\\\"--lav24-number-field\\\"].MuiInputBase-root{\\n  display:flex!important;\\n  width:100%;\\n  min-width:0;\\n  height:auto!important;\\n  align-items:center!important;\\n  margin:0!important;\\n  padding-block:0!important;\\n}\\n[style*=\\\"--lav24-number-field\\\"] input,input[style*=\\\"--lav24-number-field\\\"]{\\n  display:block!important;\\n  box-sizing:border-box!important;\\n  flex:1 1 auto;\\n  min-width:0;\\n  height:48px!important;\\n  min-height:48px!important;\\n  max-height:none!important;\\n  margin:0!important;\\n  padding:0 12px!important;\\n  font-size:34px!important;\\n  line-height:44px!important;\\n  align-self:center!important;\\n}\";\n  document.head.appendChild(style);\n})();\n</script>\n<script type=\"text/javascript\">\n(() => {\n  const id = 'lav24-native-dialog-fit';\n  if (document.getElementById(id)) return;\n\n  const style = document.createElement('style');\n  style.id = id;\n  style.textContent = '.ihdialog > .dialog[data-lav24-fit]{flex:none;zoom:var(--lav24-dialog-scale)}'\n    + '.ihdialog > .dialog [style*=\"--lav24-dialog-journal\"],.ihdialog > .dialog [style*=\"--lav24-dialog-journal\"] *{overscroll-behavior:contain}';\n  document.head.appendChild(style);\n\n  let frame = 0;\n  function fitDialogs() {\n    frame = 0;\n    const viewport = document.documentElement;\n    for (const dialog of document.querySelectorAll('.ihdialog > .dialog:has(> [style*=\"--lav24-paper\"])')) {\n      const width = parseFloat(dialog.style.width);\n      const height = parseFloat(dialog.style.height);\n      if (!(width > 0 && height > 0 && viewport.clientWidth > 24 && viewport.clientHeight > 24)) continue;\n      const scale = Math.min(1, (viewport.clientWidth - 24) / width, (viewport.clientHeight - 24) / height);\n      if (scale < 1) {\n        dialog.style.setProperty('--lav24-dialog-scale', String(scale));\n        dialog.setAttribute('data-lav24-fit', '');\n      } else {\n        dialog.style.removeProperty('--lav24-dialog-scale');\n        dialog.removeAttribute('data-lav24-fit');\n      }\n    }\n  }\n\n  function schedule() {\n    if (!frame) frame = requestAnimationFrame(fitDialogs);\n  }\n\n  new MutationObserver(schedule).observe(document.body, {childList: true, subtree: true});\n  window.addEventListener('resize', schedule, {passive: true});\n  schedule();\n})();\n</script>",
+        "active": true
+      },
+      "type": "html",
+      "_label": "lav24_system_palette",
+      "x": {
+        "value": 0
+      },
+      "y": {
+        "value": 0
+      },
+      "w": {
+        "value": 1
+      },
+      "h": {
+        "value": 1
+      },
+      "w2": {
+        "value": 1
+      },
+      "h2": {
+        "value": 1
+      },
+      "block_exec": {
+        "value": 0
+      }
+    },
+    "wled_status": {
+      "text": {
+        "value": "Text 1",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "const v = getValue(inData, 'online');\nreturn v === 1 || v === true || v === '1' ? 'WLED · на связи' : 'WLED · нет связи';",
+        "text": "Text 1"
+      },
+      "textSize": {
+        "value": 31
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "x": {
+        "value": 342
+      },
+      "y": {
+        "value": 262
+      },
+      "w": {
+        "value": 412
+      },
+      "h": {
+        "value": 60
+      },
+      "w2": {
+        "value": 412
+      },
+      "h2": {
+        "value": 60
+      },
+      "_label": "wled_status"
+    },
+    "brightness_label": {
+      "text": {
+        "value": "Яркость, %"
+      },
+      "textSize": {
+        "value": 34
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "x": {
+        "value": 27
+      },
+      "y": {
+        "value": 329
+      },
+      "w": {
+        "value": 460
+      },
+      "h": {
+        "value": 50
+      },
+      "w2": {
+        "value": 460
+      },
+      "h2": {
+        "value": 50
+      },
+      "_label": "brightness_label"
+    },
+    "wled_segment": {
+      "text": {
+        "value": "Text 1",
+        "enabled": true,
+        "did": "local_dev_id",
+        "prop": "dev_id",
+        "title": "ID устройства",
+        "func": "const v = getValue(inData, 'segment_available');\nreturn v === 1 || v === true || v === '1' ? 'Сегмент WLED доступен' : 'Проверьте связь или ID сегмента WLED';",
+        "text": "Text 1"
+      },
+      "textSize": {
+        "value": 26
+      },
+      "textBold": {
+        "value": 1
+      },
+      "textItalic": {
+        "value": 0
+      },
+      "textFontFamily": {
+        "value": {
+          "id": "Arial",
+          "title": "Arial"
+        }
+      },
+      "textAlignH": {
+        "value": {
+          "id": "flex-start",
+          "lang": "left",
+          "title": "Слева"
+        }
+      },
+      "textAlignV": {
+        "value": {
+          "id": "center",
+          "title": "Center"
+        }
+      },
+      "textRotate": {
+        "value": 0
+      },
+      "textColor": {
+        "value": "var(--lav24-ink,#28354a)"
+      },
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,255,0,1)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visable": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "type": "text",
+      "x": {
+        "value": 27
+      },
+      "y": {
+        "value": 861
+      },
+      "w": {
+        "value": 725
+      },
+      "h": {
+        "value": 46
+      },
+      "w2": {
+        "value": 725
+      },
+      "h2": {
+        "value": 46
+      },
+      "_label": "wled_segment"
+    },
+    "wled_controls": {
+      "borderSize": {
+        "value": 0
+      },
+      "borderRadius": {
+        "value": 0
+      },
+      "borderStyle": {
+        "value": {
+          "id": "solid",
+          "title": "Solid"
+        }
+      },
+      "borderColor": {
+        "value": "rgba(0,0,0,0)"
+      },
+      "backgroundColor": {
+        "type": "fill",
+        "value": "transparent",
+        "fill": "transparent",
+        "angle": 90,
+        "shape": "circle",
+        "positionX": 50,
+        "positionY": 50,
+        "extent": "closest-side",
+        "palette": [
+          {
+            "offset": "0.00",
+            "color": "#4A90E2",
+            "opacity": 1
+          },
+          {
+            "offset": "1.00",
+            "color": "#9013FE",
+            "opacity": 1
+          }
+        ]
+      },
+      "rotate": {
+        "value": 0
+      },
+      "animation": {},
+      "flipH": {
+        "value": false
+      },
+      "flipV": {
+        "value": false
+      },
+      "boxShadow": {
+        "active": false,
+        "value": "2px 2px 4px 0px #000000"
+      },
+      "zIndex": {
+        "value": 100
+      },
+      "opacity": {
+        "value": 100
+      },
+      "visible": {
+        "value": true
+      },
+      "overflow": {
+        "value": true
+      },
+      "code": {
+        "value": "<style>\n  .lav24-wled-controls {\n    display: grid;\n    grid-template-columns: minmax(170px, 30%) minmax(0, 1fr);\n    align-items: center;\n    gap: 10px 12px;\n    color: var(--lav24-ink, #28354a);\n    font: 600 29px Arial, sans-serif;\n  }\n  .lav24-wled-controls select, .lav24-wled-controls input {\n    width: 100%;\n    height: 64px;\n    min-width: 0;\n    box-sizing: border-box;\n    padding: 5px 12px;\n    border: 1px solid var(--lav24-edge, #e3d8c8);\n    border-radius: 14px;\n    color: inherit;\n    background: var(--lav24-field, #f1ede6);\n    font: 400 28px Arial, sans-serif;\n  }\n  .lav24-wled-controls input[type=color] { width: 128px; cursor: pointer; }\n  .lav24-wled-controls a {\n    grid-column: 1 / -1;\n    justify-self: end;\n    color: var(--lav24-info, #275e94);\n    padding: 7px 0;\n  }\n</style>\n<div id=\"${uuid}\" class=\"lav24-wled-controls\">\n  <label for=\"${uuid}-color\">Цвет</label>\n  <input id=\"${uuid}-color\" type=\"color\" disabled>\n  <label for=\"${uuid}-preset\">Пресет</label>\n  <select id=\"${uuid}-preset\" disabled><option>Загрузка…</option></select>\n  <label for=\"${uuid}-effect\">Эффект</label>\n  <select id=\"${uuid}-effect\" disabled><option>Загрузка…</option></select>\n  <label for=\"${uuid}-palette\">Палитра</label>\n  <select id=\"${uuid}-palette\" disabled><option>Загрузка…</option></select>\n  <a target=\"_blank\" rel=\"noopener noreferrer\" hidden>Расширенные настройки WLED ↗</a>\n</div>\n<script type=\"text/javascript\">\n(() => {\n  const api = window.ihapi;\n  const root = document.getElementById(uuid);\n  if (!api || !root) return;\n\n  const did = '__DEVICE_ID__';\n  const kinds = ['preset', 'effect', 'palette'];\n  const props = [...kinds, 'color', 'wled_controls', 'online', 'segment_available'];\n  const subscriptions = props.map(prop => did + '_' + prop);\n  const values = Object.fromEntries(props.map(prop => [prop, api.deviceValue(did, prop)]));\n  const color = root.querySelector('input');\n  const link = root.querySelector('a');\n  const selects = [...root.querySelectorAll('select')];\n  let catalogValue;\n  let controls = {};\n\n  function refreshChoices() {\n    catalogValue = values.wled_controls;\n    try {\n      controls = JSON.parse(catalogValue) || {};\n    } catch (error) {\n      controls = {};\n    }\n    kinds.forEach((kind, index) => {\n      const entries = Array.isArray(controls[kind]) ? controls[kind] : [];\n      const counts = new Map();\n      for (const [, name] of entries) counts.set(name, (counts.get(name) || 0) + 1);\n      const hint = new Option(entries.length ? 'Выберите…' : 'Список недоступен', '');\n      hint.disabled = true;\n      const options = entries.map(([id, name]) => new Option(\n        counts.get(name) > 1 ? name + ' (#' + id + ')' : name, String(id)\n      ));\n      selects[index].replaceChildren(hint, ...options);\n    });\n    link.hidden = true;\n    link.removeAttribute('href');\n    try {\n      const url = new URL(controls.url);\n      if (['http:', 'https:'].includes(url.protocol) && !url.username && !url.password) {\n        link.href = url.href;\n        link.hidden = false;\n      }\n    } catch (error) {\n      // The link appears when the controller address is available.\n    }\n  }\n\n  function update(data) {\n    for (const prop of props) {\n      const key = did + '_' + prop;\n      if (data && Object.prototype.hasOwnProperty.call(data, key)) values[prop] = data[key];\n    }\n    if (catalogValue !== values.wled_controls) refreshChoices();\n    const online = Number(values.online) === 1;\n    const segment = online && Number(values.segment_available) === 1;\n    if (typeof values.color === 'string' && /^#[0-9a-f]{6}([0-9a-f]{2})?$/i.test(values.color) &&\n        document.activeElement !== color) color.value = values.color.slice(0, 7);\n    color.disabled = !segment;\n    kinds.forEach((kind, index) => {\n      const select = selects[index];\n      select.disabled = !(kind === 'preset' ? online : segment) || select.options.length < 2;\n      const current = String(values[kind]);\n      select.value = [...select.options].some(option => option.value === current) ? current : '';\n    });\n  }\n\n  color.addEventListener('change', () => {\n    const white = /^#[0-9a-f]{8}$/i.test(values.color) ? values.color.slice(7) : '';\n    api.deviceCommand(did, 'color', color.value + white);\n  });\n  kinds.forEach((kind, index) => {\n    selects[index].addEventListener('change', event => {\n      if (event.target.value !== '') api.deviceCommand(did, kind, Number(event.target.value));\n    });\n  });\n  api.addEventListener(uuid, 'data', update);\n  api.addEventListener(uuid, 'destroy', () => api.deviceUnsub(uuid, subscriptions));\n  api.deviceSub(uuid, subscriptions);\n  refreshChoices();\n  update();\n})();\n</script>\n",
+        "active": true
+      },
+      "type": "html",
+      "_label": "wled_controls",
+      "x": {
+        "value": 27
+      },
+      "y": {
+        "value": 495
+      },
+      "w": {
+        "value": 725
+      },
+      "h": {
+        "value": 359
+      },
+      "w2": {
+        "value": 725
+      },
+      "h2": {
+        "value": 359
+      },
+      "block_exec": {
+        "value": 0
+      }
+    }
+  }
+}
