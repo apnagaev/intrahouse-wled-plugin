@@ -1,0 +1,12 @@
+{
+  "grid": [
+    { "id": "connection", "xs": 12, "class": "main", "table": "units" }
+  ],
+  "spacing": 10,
+  "connection": [
+    { "prop": "host", "title": "IP или имя WLED (можно с портом)", "type": "input", "default": "" },
+    { "prop": "pollSeconds", "title": "Опрос, секунд (1–300)", "type": "input", "default": 5 },
+    { "prop": "timeout", "title": "Тайм-аут запроса, мс (250–15000)", "type": "input", "default": 2500 },
+    { "prop": "segment", "title": "ID сегмента (−1 = главный)", "type": "input", "default": -1 }
+  ]
+}
