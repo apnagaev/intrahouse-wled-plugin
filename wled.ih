@@ -1,6 +1,6 @@
 {
   "id": "wled",
   "description": "WLED — светодиодные контроллеры по локальной сети",
-  "version": "1.0.1",
+  "version": "5.0.0",
   "cross": true
 }
