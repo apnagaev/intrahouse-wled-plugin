@@ -1,0 +1,7 @@
+{
+  "name": "wled",
+  "version": "1.0.1",
+  "description": "WLED JSON API plugin for intraHouse",
+  "main": "index.js",
+  "dependencies": {}
+}

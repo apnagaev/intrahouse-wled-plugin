@@ -1,16 +1,83 @@
 {
+  "name": "wled",
+  "description": "Светодиодные контроллеры WLED по локальной сети",
   "module": "index.js",
   "single": 0,
   "nochannels": 0,
   "comment": "WLED JSON API",
-  "channels": [
-    { "id": "online", "desc": "Связь с контроллером", "r": 1, "w": 0 },
-    { "id": "on", "desc": "Питание ленты", "r": 1, "w": 1 },
-    { "id": "brightness", "desc": "Яркость, %", "r": 1, "w": 1 },
-    { "id": "preset", "desc": "Пресет WLED", "r": 1, "w": 1 },
-    { "id": "color", "desc": "Основной цвет сегмента, HEX", "r": 1, "w": 1 },
-    { "id": "effect", "desc": "Эффект сегмента", "r": 1, "w": 1 },
-    { "id": "palette", "desc": "Палитра сегмента", "r": 1, "w": 1 },
-    { "id": "segment_available", "desc": "Выбранный сегмент доступен", "r": 1, "w": 0 }
-  ]
+  "spawn": 0,
+  "channel_popup": {
+    "add": [
+      {
+        "id": "channel_node_folder",
+        "title": "Набор каналов WLED"
+      },
+      {
+        "id": "channel",
+        "title": "$NewChannel"
+      }
+    ],
+    "copypaste": true,
+    "delete": true
+  },
+  "default_channel": {
+    "chan": "online",
+    "title": "Связь с контроллером",
+    "r": 1,
+    "w": 0
+  },
+  "default_channel_node_folder": {
+    "foldertype": "node",
+    "title": "Каналы WLED",
+    "channels": [
+      {
+        "chan": "online",
+        "title": "Связь с контроллером",
+        "r": 1,
+        "w": 0
+      },
+      {
+        "chan": "on",
+        "title": "Питание ленты",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "brightness",
+        "title": "Яркость, %",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "preset",
+        "title": "Пресет WLED",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "color",
+        "title": "Основной цвет сегмента, HEX",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "effect",
+        "title": "Эффект сегмента",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "palette",
+        "title": "Палитра сегмента",
+        "r": 1,
+        "w": 1
+      },
+      {
+        "chan": "segment_available",
+        "title": "Выбранный сегмент доступен",
+        "r": 1,
+        "w": 0
+      }
+    ]
+  }
 }
