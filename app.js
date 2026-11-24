@@ -151,7 +151,7 @@ module.exports = function start(plugin, params) {
   }
 
   function publishControls() {
-    const controls = { url: new URL('/settings', endpoint).href };
+    const controls = { url: new URL('/', endpoint).href };
     for (const [kind, names] of catalogs) controls[kind] = [...names];
     publish({ controls: JSON.stringify(controls) });
   }
